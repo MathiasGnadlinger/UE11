@@ -21,9 +21,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <TextField prefHeight="25.0" prefWidth="256.0" promptText="KI688-WB" />
-      <Button fx:id="btn_search" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Search..." GridPane.rowIndex="1" />
-      <Button fx:id="btn_serachExact" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Search exact..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <TextArea fx:id="TxtAr_Output" prefHeight="200.0" prefWidth="50.0" GridPane.rowIndex="3" />
+      <TextField fx:id="txtFi_Input" prefHeight="25.0" prefWidth="256.0" promptText="KI688-WB" />
+      <Button fx:id="btn_search" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="82.0" text="Search..." GridPane.rowIndex="1" />
+      <Button fx:id="btn_serachExact" mnemonicParsing="false" onAction="#exact_search" prefHeight="25.0" prefWidth="96.0" text="Search exact..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextArea fx:id="txtAr_Output" prefHeight="200.0" prefWidth="50.0" GridPane.rowIndex="3" />
    </children>
 </GridPane>

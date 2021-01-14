@@ -1,5 +1,8 @@
 package model;
-
+/**
+ * @author Mathias Gnadlinger
+ * @version 11, 14.01.2021
+ */
 public class Vehicle
 {
     private String color;
@@ -15,7 +18,6 @@ public class Vehicle
         this.model = model;
         this.licensePlate = licensePlate;
     }
-
 
     public String getColor() {
         return color;
@@ -60,12 +62,11 @@ public class Vehicle
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "color='" + color + '\'' +
-                ", owner='" + owner + '\'' +
-                ", manufacturer='" + manufacturer + '\'' +
-                ", model='" + model + '\'' +
-                ", licensePlate='" + licensePlate + '\'' +
-                '}';
+        return "Vehicle" +
+                "\nColor= " + color +
+                "\nOwner= " + owner +
+                "\nManufacturer= " + manufacturer +
+                "\nModel= " + model +
+                "\nLicensePlate= " + licensePlate;
     }
 }

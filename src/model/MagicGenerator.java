@@ -1,5 +1,8 @@
 package model;
-
+/**
+ * @author Mathias Gnadlinger
+ * @version 11, 14.01.2021
+ */
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,7 +16,8 @@ public class MagicGenerator {
 
     private Random r = new Random();
 
-    public String getRandomManufacturer() {
+    public String getRandomManufacturer()
+    {
         int i = r.nextInt(car.length);
         String[] split = car[i].split(";");
         if(split.length == 2)    //looks like a correct car string
@@ -22,12 +26,15 @@ public class MagicGenerator {
             return "";
     }
 
-    public String getRandomModel(String manufacturer) {
+    public String getRandomModel(String manufacturer)
+    {
         ArrayList<String> model = new ArrayList<>();
 
-        for (String m : car) {
+        for (String m : car)
+        {
             String[] split = m.split(";");
-            if (split.length == 2 && split[0].equals(manufacturer)) {
+            if (split.length == 2 && split[0].equals(manufacturer))
+            {
                 model.add(split[1]);
             }
         }
@@ -36,12 +43,14 @@ public class MagicGenerator {
         return model.get(i);
     }
 
-    public String getRandomColor() {
+    public String getRandomColor()
+    {
         int i = r.nextInt(color.length);
         return color[i];
     }
 
-    public String getRandomLicencePlate() {
+    public String getRandomLicencePlate()
+    {
         StringBuilder sb = new StringBuilder();
         int i = r.nextInt(license.length);
         sb.append(license[i]);
@@ -58,7 +67,8 @@ public class MagicGenerator {
         String name = "";
 
         //random boy or girl
-        if(r.nextBoolean()) {
+        if(r.nextBoolean())
+        {
             i = r.nextInt(names_m.length);
             name = names_m[i];
         }
